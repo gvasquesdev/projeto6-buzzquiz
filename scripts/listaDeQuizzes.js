@@ -11,15 +11,16 @@ function buscarQuizzesServidor() {
 
 function renderizarQuizzes(quizzes) {
   quizzesServidor = quizzes.data;
+  console.log(quizzesServidor);
 
   const serverQuizzes = document.querySelector(".server-quizzes");
   serverQuizzes.innerHTML = "";
 
   quizzesServidor.forEach((quizz) => {
-    let { image: imagem, title: titulo } = quizz;
+    let { id: id, title: titulo, image: imagem } = quizz;
 
     let quizzRenderizado = `
-    <div class="quizz" onclick="responderQuizz()">
+    <div id="${id}" class="quizz" onclick="responderQuizz(this.id)">
     <img src="${imagem}">
     <h3>${titulo}</h3>
     </div>
