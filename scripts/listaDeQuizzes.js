@@ -20,7 +20,7 @@ function renderizarQuizzes(quizzes) {
     let { id: id, title: titulo, image: imagem } = quizz;
 
     let quizzRenderizado = `
-    <div id="${id}" class="quizz" onclick="responderQuizz(this.id)">
+    <div id="${id}" class="quizz" onclick="identificarQuizz(this.id)">
     <img src="${imagem}">
     <h3>${titulo}</h3>
     </div>
