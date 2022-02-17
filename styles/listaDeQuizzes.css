@@ -3,7 +3,8 @@
 .no-user-quizzes {
   width: 340px;
   height: 180px;
-  margin: 8% auto;
+  margin: 0 auto;
+  margin-top: 100px;
   border: 2px dotted #d4d4d4;
   text-align: center;
   font-size: 20px;

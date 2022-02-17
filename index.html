@@ -27,24 +27,25 @@
       <h1>BuzzQuizz</h1>
    </header>
 
-   <article id="all-quizzes">
-      <section class="container-user-quizzes">
-         <div class="no-user-quizzes">
-            <h2>Você não criou nenhum Quizz ainda :(</h2>
-            <button onclick="criarQuizz()">Criar Quizz</button>
-         </div>
-      </section>
-
-      <section class="container-server-quizzes">
-         <h2>Todos os Quizzes</h2>
-         <section class="server-quizzes">
-            <!-- Inseridos dinamicamente pelo JS -->
+   <main>
+      <article id="all-quizzes">
+         <section class="container-user-quizzes">
+            <div class="no-user-quizzes">
+               <h2>Você não criou nenhum Quizz ainda :(</h2>
+               <button onclick="criarQuizz()">Criar Quizz</button>
+            </div>
          </section>
-      </section>
-   </article>
+         <section class="container-server-quizzes">
+            <h2>Todos os Quizzes</h2>
+            <section class="server-quizzes">
+               <!-- Inseridos dinamicamente pelo JS -->
+            </section>
+         </section>
+      </article>
 
-   <article id="answering-quiz">
-   </article>
+      <article id="answering-quiz">
+      </article>
+   </main>
 
    <!-- Scripts -->
    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
