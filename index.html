@@ -7,51 +7,125 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
    <link rel="icon" href="./images/icon.png">
-   <title>BuzzQuizz</title>
-   <!-- Importando a fonte -->
+   <title>BuzzQuiz</title>
+
+   <!-- Importing font family -->
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap"
       rel="stylesheet">
-   <!-- Linkando estilos -->
+
+   <!-- Importing styles -->
    <link rel="stylesheet" href="./styles/reset.css">
-   <link rel="stylesheet" href="./styles/geral.css">
-   <link rel="stylesheet" href="./styles/listaDeQuizzes.css">
-   <link rel="stylesheet" href="./styles/paginaDoQuizz.css">
-   <link rel="stylesheet" href="./styles/criacaoDeQuizz.css">
+   <link rel="stylesheet" href="./styles/general.css">
+   <link rel="stylesheet" href="./styles/screen1-quizzesList.css">
+   <link rel="stylesheet" href="./styles/screen2-quizPage.css">
+   <link rel="stylesheet" href="./styles/screen3-createQuiz.css">
 </head>
 
 <body>
-   <header>
-      <h1>BuzzQuizz</h1>
+
+   <header onclick="window.location.reload()">
+      <h1>BuzzQuiz</h1>
    </header>
 
    <main>
-      <article id="all-quizzes">
-         <section class="container-user-quizzes">
-            <div class="no-user-quizzes">
-               <h2>Você não criou nenhum Quizz ainda :(</h2>
-               <button onclick="criarQuizz()">Criar Quizz</button>
-            </div>
+      <article id="screen1">
+         <section class="user-quizzes-section">
+            <section class="no-user-quizzes">
+               <p>Você não criou nenhum Quiz ainda :(</p>
+               <button onclick="createQuiz()">Criar Quiz</button>
+            </section>
+
+            <section class="has-user-quizzes">
+               <div>
+                  <h2 class="section-title">Seus Quizzes</h2>
+                  <button onclick="createQuiz()"><img src="./images/createQuizz.png"></button>
+               </div>
+               <section class="user-quizzes">
+                  <!-- Inserted by Javascript -->
+               </section>
+            </section>
          </section>
-         <section class="container-server-quizzes">
-            <h2>Todos os Quizzes</h2>
+
+         <section class="server-quizzes-section">
+            <h2 class="section-title">Todos os Quizzes</h2>
             <section class="server-quizzes">
-               <!-- Inseridos dinamicamente pelo JS -->
+               <!-- Inserted by Javascript -->
             </section>
          </section>
       </article>
 
-      <article id="answering-quiz">
+      <article id="screen2">
+         <section class="banner">
+            <!-- Inserted by JS -->
+         </section>
+
+         <section class="questions">
+            <!-- Inserted by JS -->
+         </section>
+
+         <section class="end-of-quiz">
+            <!-- Inserted by JS -->
+         </section>
+      </article>
+
+      <article id="screen3">
+
+         <section class="basic-quiz-information">
+            <div class="form-header">
+               <h1>Comece pelo começo</h1>
+            </div>
+
+            <div class="form-body">
+               <form action="">
+                  <input class="cqfield1" type="text" placeholder="Título do seu quizz">
+                  <input class="cqfield2" type="text" placeholder="URL da imagem do seu quizz">
+                  <input class="cqfield3" type="text" placeholder="Quantidade de perguntas do quizz">
+                  <input class="cqfield4" type="text" placeholder="Quantidade de níveis do quizz">
+                  <button onclick="criarPerguntas()">Prosseguir para criar perguntas</button>
+               </form>
+            </div>
+         </section>
+
+         <section class="create-quiz-questions">
+            <div class="cqq-form-header hidden">
+               <h1>Crie suas perguntas</h1>
+            </div>
+            <form action="">
+               <div class="pergunta1">
+                  <h1>Pergunta 1</h1>
+                  <input class="cqqfield1" type="text" placeholder="Texto da pergunta">
+                  <input class="cqqfield2" type="text" placeholder="Cor de fundo da sua pergunta">
+                  <h1>Resposta Correta</h1>
+                  <input class="cqqfield3" type="text" placeholder="Resposta correta">
+                  <input class="cqqfield4" type="text" placeholder="URL da imagem">
+                  <h1>Respostas incorretas</h1>
+                  <input class="cqqfield3" type="text" placeholder="Resposta incorreta 1">
+                  <input class="cqqfield4" type="text" placeholder="URL da imagem 1">
+                  <input class="cqqfield3" type="text" placeholder="Resposta incorreta 2">
+                  <input class="cqqfield4" type="text" placeholder="URL da imagem 2">
+                  <input class="cqqfield3" type="text" placeholder="Resposta incorreta 3">
+                  <input class="cqqfield4" type="text" placeholder="URL da imagem 3">
+               </div>
+               <div class="pergunta2">Pergunta 2</div>
+               <div class="pergunta3">Pergunta 3</div>
+               <button onclick="criarPerguntas()">Prosseguir para criar níveis</button>
+         </section>
+
+         <section class="create-quiz-levels">
+         </section>
+
+         <section class="create-quiz-success">
+         </section>
+
       </article>
    </main>
 
-   <!-- Scripts -->
+   <!-- Importing scripts -->
    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-   <script src="./scripts/listaDeQuizzes.js"></script>
-   <script src="./scripts/paginaDoQuizz.js"></script>
-   <script src="./scripts/criacaoDeQuizz.js"></script>
+   <script src="./scripts/scripts.js"></script>
 </body>
 
 </html>
