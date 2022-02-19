@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+}
+
+#screen3 {
+  width: 100vw;
+  height: calc(100vh - 70px);
+  display: block;
+  background-color: #fafafa;
+}
+
+/* Basic Quiz Informations */
+
+.basic-quiz-information {
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+}
+
+.form-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-header h1 {
+  width: 195px;
+  margin: 30px 80px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.form-body {
+  background: #ffffff;
+  padding: 20px 0px;
+}
+.form-body form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form-body input {
+  width: 340px;
+  height: 46px;
+  border: 1px solid #d1d1d1;
+  border-radius: 5px;
+  background: #ffffff;
+  font-size: 19px;
+  font-style: italic;
+  color: #bababa;
+  line-height: 1.2;
+  margin: 5px 0px;
+  padding: 2px 10px;
+}
+
+.basic-quiz-information button {
+  width: 324px;
+  border: 1px solid transparent;
+  border-radius: 15px;
+  background: #ec362d;
+  text-align: center;
+  font-size: 18px;
+  color: #fff5f4;
+  margin-top: 30px;
+  padding: 15px;
+}
+
+/* Create Quiz Questions */
+
+/* .create-quiz-questions {
+  width: 100vw;
+  height: 100vh;
+  background: #ffffff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+} */

@@ -72,43 +72,50 @@
       </article>
 
       <article id="screen3">
-
          <section class="basic-quiz-information">
             <div class="form-header">
                <h1>Comece pelo começo</h1>
             </div>
 
             <div class="form-body">
-               <form action="">
-                  <input class="cqfield1" type="text" placeholder="Título do seu quizz">
-                  <input class="cqfield2" type="text" placeholder="URL da imagem do seu quizz">
+               <form>
+                  <input class="cqfield1" type="text" placeholder="Título do seu quizz" required minlength="20"
+                     maxlength="65">
+                  <input class="cqfield2" type="url" placeholder="URL da imagem do seu quizz">
                   <input class="cqfield3" type="text" placeholder="Quantidade de perguntas do quizz">
                   <input class="cqfield4" type="text" placeholder="Quantidade de níveis do quizz">
-                  <button onclick="criarPerguntas()">Prosseguir para criar perguntas</button>
                </form>
             </div>
+
+            <button onclick="criarPerguntas()">Prosseguir para criar perguntas</button>
          </section>
 
-         <section class="create-quiz-questions">
-            <div class="cqq-form-header hidden">
+         <section class="create-quiz-questions hidden">
+            <div class="cqq-form-header">
                <h1>Crie suas perguntas</h1>
             </div>
             <form action="">
+
                <div class="pergunta1">
                   <h1>Pergunta 1</h1>
-                  <input class="cqqfield1" type="text" placeholder="Texto da pergunta">
-                  <input class="cqqfield2" type="text" placeholder="Cor de fundo da sua pergunta">
+                  <input class="cqqfield1" type="text" placeholder="Texto da pergunta" required minlength="20">
+                  <input class="cqqfield2" type="color" placeholder="Cor de fundo da sua pergunta" required>
+
                   <h1>Resposta Correta</h1>
-                  <input class="cqqfield3" type="text" placeholder="Resposta correta">
-                  <input class="cqqfield4" type="text" placeholder="URL da imagem">
+                  <input class="cqqfield3" type="text" placeholder="Resposta correta" required minlength="1">
+                  <input class="cqqfield4" type="url" placeholder="URL da imagem" required>
+
                   <h1>Respostas incorretas</h1>
-                  <input class="cqqfield3" type="text" placeholder="Resposta incorreta 1">
-                  <input class="cqqfield4" type="text" placeholder="URL da imagem 1">
-                  <input class="cqqfield3" type="text" placeholder="Resposta incorreta 2">
-                  <input class="cqqfield4" type="text" placeholder="URL da imagem 2">
-                  <input class="cqqfield3" type="text" placeholder="Resposta incorreta 3">
-                  <input class="cqqfield4" type="text" placeholder="URL da imagem 3">
+                  <input class="cqqfield3" type="text" placeholder="Resposta incorreta 1" required minlength="1">
+                  <input class="cqqfield4" type="url" placeholder="URL da imagem 1" required>
+
+                  <input class="cqqfield3" type="text" placeholder="Resposta incorreta 2" minlength="1">
+                  <input class="cqqfield4" type="url" placeholder="URL da imagem 2">
+
+                  <input class="cqqfield3" type="text" placeholder="Resposta incorreta 3" minlength="1">
+                  <input class="cqqfield4" type="url" placeholder="URL da imagem 3">
                </div>
+
                <div class="pergunta2">Pergunta 2</div>
                <div class="pergunta3">Pergunta 3</div>
                <button onclick="criarPerguntas()">Prosseguir para criar níveis</button>
