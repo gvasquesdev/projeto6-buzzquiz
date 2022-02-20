@@ -230,3 +230,29 @@ function restartQuiz() {
 function shuffle() {
   return Math.random() - 0.5;
 }
+
+/* SCREEN3 -> CREATE QUIZ */
+
+const CQ_BasicInfos = document.querySelector(".basicInfos");
+const CQ_Questions = document.querySelector(".quizQuestions");
+const CQ_Levels = document.querySelector(".quizLevels");
+const CQ_Success = document.querySelector(".quizSuccess");
+
+function continueToQuestions() {
+  CQ_BasicInfos.classList.add("hidden");
+  CQ_Questions.classList.remove("hidden");
+}
+function continueToLevels() {
+  CQ_Questions.classList.add("hidden");
+  CQ_Levels.classList.remove("hidden");
+}
+function finishQuizCreation() {
+  CQ_Levels.classList.add("hidden");
+  CQ_Success.classList.remove("hidden");
+}
+
+// function toggleAddNew(button) {
+//   const divNewOne = button.parentElement;
+//   const newLevel = divNewOne.querySelector(".s3-container");
+//   newLevel.classList.toggle("hidden");
+// }

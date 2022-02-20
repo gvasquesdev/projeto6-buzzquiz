@@ -71,62 +71,120 @@
          </section>
       </article>
 
-      <article id="screen3">
-         <section class="basic-quiz-information">
-            <div class="form-header">
-               <h1>Comece pelo começo</h1>
-            </div>
-
-            <div class="form-body">
-               <form>
-                  <input class="cqfield1" type="text" placeholder="Título do seu quizz" required minlength="20"
-                     maxlength="65">
-                  <input class="cqfield2" type="url" placeholder="URL da imagem do seu quizz">
-                  <input class="cqfield3" type="text" placeholder="Quantidade de perguntas do quizz">
-                  <input class="cqfield4" type="text" placeholder="Quantidade de níveis do quizz">
-               </form>
-            </div>
-
-            <button onclick="criarPerguntas()">Prosseguir para criar perguntas</button>
+      <article id="screen3" class="createQuiz">
+         <section class="basicInfos">
+            <h1 class="s3-title">Comece pelo começo</h1>
+            <form>
+               <input type="text" placeholder="Título do seu quiz" required minlength="20" maxlength="65">
+               <input type="url" placeholder="URL da imagem do seu quiz" required>
+               <input type="number" placeholder="Quantidade de perguntas do seu quiz" required min="3">
+               <input type="number" placeholder="Quantidade de níveis do seu quiz" required min="2">
+            </form>
+            <button class="mainButton" onclick="continueToQuestions()">Prosseguir para criar perguntas</button>
          </section>
 
-         <section class="create-quiz-questions hidden">
-            <div class="cqq-form-header">
-               <h1>Crie suas perguntas</h1>
-            </div>
-            <form action="">
+         <section class="quizQuestions hidden">
+            <h1 class="s3-title">Crie suas perguntas</h1>
 
-               <div class="pergunta1">
-                  <h1>Pergunta 1</h1>
-                  <input class="cqqfield1" type="text" placeholder="Texto da pergunta" required minlength="20">
-                  <input class="cqqfield2" type="color" placeholder="Cor de fundo da sua pergunta" required>
+            <form>
+               <fieldset class="question">
+                  <h2 class="s3-subtitle">Pergunta 1</h2>
+                  <input class="questionText" type="text" placeholder="Texto da pergunta">
+                  <input class="questionBgColor" type="color" placeholder="Cor de fundo da pergunta">
+               </fieldset>
+               <fieldset class="correctAnswer">
+                  <h2 class="s3-subtitle">Resposta correta</h2>
+                  <input class="rightAnswer" type="text" placeholder="Resposta correta">
+                  <input class="urlRightAnswer" type="url" placeholder="URL da imagem">
+               </fieldset>
+               <fieldset class="wrongAnswers">
+                  <h2 class="s3-subtitle">Respostas incorretas</h2>
 
-                  <h1>Resposta Correta</h1>
-                  <input class="cqqfield3" type="text" placeholder="Resposta correta" required minlength="1">
-                  <input class="cqqfield4" type="url" placeholder="URL da imagem" required>
+                  <input class="wrongAnswer1" type="text" placeholder="Resposta incorreta 1">
+                  <input class="urlWrongAnswer1" type="url" placeholder="URL da imagem 1">
 
-                  <h1>Respostas incorretas</h1>
-                  <input class="cqqfield3" type="text" placeholder="Resposta incorreta 1" required minlength="1">
-                  <input class="cqqfield4" type="url" placeholder="URL da imagem 1" required>
+                  <input class="wrongAnswer2" type="text" placeholder="Resposta incorreta 2">
+                  <input class="urlWrongAnswer2" type="url" placeholder="URL da imagem 2">
 
-                  <input class="cqqfield3" type="text" placeholder="Resposta incorreta 2" minlength="1">
-                  <input class="cqqfield4" type="url" placeholder="URL da imagem 2">
+                  <input class="wrongAnswer3" type="text" placeholder="Resposta incorreta 3">
+                  <input class="urlWrongAnswer3" type="url" placeholder="URL da imagem 3">
+               </fieldset>
+            </form>
 
-                  <input class="cqqfield3" type="text" placeholder="Resposta incorreta 3" minlength="1">
-                  <input class="cqqfield4" type="url" placeholder="URL da imagem 3">
+            <div class="newOne">
+               <div>
+                  <h2 class="s3-subtitle">Pergunta 2</h2>
                </div>
+               <div>
+                  <button onclick="">
+                     <img src="./images/newOne.png">
+                  </button>
+               </div>
+            </div>
 
-               <div class="pergunta2">Pergunta 2</div>
-               <div class="pergunta3">Pergunta 3</div>
-               <button onclick="criarPerguntas()">Prosseguir para criar níveis</button>
+            <div class="newOne">
+               <div>
+                  <h2 class="s3-subtitle">Pergunta 3</h2>
+               </div>
+               <div>
+                  <button onclick="">
+                     <img src="./images/newOne.png">
+                  </button>
+               </div>
+            </div>
+
+            <button class="mainButton" onclick="continueToLevels()">Prosseguir para criar níveis</button>
          </section>
 
-         <section class="create-quiz-levels">
+         <section class="quizLevels hidden">
+            <h1 class="s3-title">Agora, decida os níveis</h1>
+
+            <form class="s3-container">
+               <fieldset class="level">
+                  <h2 class="s3-subtitle">Nível 1</h2>
+                  <input class="levelTitle" type="text" placeholder="Título do nível">
+                  <input class="levelMinPercent" type="number" placeholder="% de acerto mínima">
+                  <input class="levelURL" type="url" placeholder="URL da imagem do nível">
+                  <textarea class="levelDescription" placeholder="Descrição do nível"></textarea>
+               </fieldset>
+            </form>
+
+            <div class="newOne">
+               <div>
+                  <h2 class="s3-subtitle">Nível 2</h2>
+               </div>
+               <div>
+                  <button onclick="toggleAddNew(this)">
+                     <img src="./images/newOne.png">
+                  </button>
+               </div>
+            </div>
+
+            <div class="newOne">
+               <div>
+                  <h2 class="s3-subtitle">Nível 3</h2>
+               </div>
+               <div>
+                  <button onclick="toggleAddNew(this)">
+                     <img src="./images/newOne.png">
+                  </button>
+               </div>
+            </div>
+
+            <button class="mainButton" onclick="finishQuizCreation()">Finalizar Quiz</button>
          </section>
 
-         <section class="create-quiz-success">
-         </section>
+         <section class="quizSuccess hidden">
+            <h1 class="s3-title">Seu quiz está pronto!</h1>
 
+            <div class="quizBanner">
+               <img src="#BANNER">
+               <p>TITULO DO QUIZ</p>
+            </div>
+
+            <button onclick="">Acessar Quiz</button>
+            <button onclick="window.location.reload()">Voltar para home</button>
+         </section>
       </article>
    </main>
 
