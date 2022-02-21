@@ -74,7 +74,7 @@
       </article>
 
       <article id="screen3" class="createQuiz">
-         <section class="basicInfos">
+         <section class="basicInfos hidden">
             <h1 class="s3-title">Comece pelo começo</h1>
             <form>
                <input type="text" placeholder="Título do seu quiz" required minlength="20" maxlength="65">
@@ -84,35 +84,29 @@
             </form>
             <button class="mainButton" onclick="continueToQuestions()">Prosseguir para criar perguntas</button>
          </section>
-
-         <section class="quizQuestions hidden">
+         <section class="quizQuestions">
             <h1 class="s3-title">Crie suas perguntas</h1>
-
             <form>
-               <fieldset class="question">
+               <fieldset class="quizQuestion">
                   <h2 class="s3-subtitle">Pergunta 1</h2>
                   <input class="questionText" type="text" placeholder="Texto da pergunta">
                   <input class="questionBgColor" type="color" placeholder="Cor de fundo da pergunta">
                </fieldset>
-               <fieldset class="correctAnswer">
+               <fieldset class="quizCorrectAnswer">
                   <h2 class="s3-subtitle">Resposta correta</h2>
                   <input class="rightAnswer" type="text" placeholder="Resposta correta">
                   <input class="urlRightAnswer" type="url" placeholder="URL da imagem">
                </fieldset>
-               <fieldset class="wrongAnswers">
+               <fieldset class="quizWrongAnswers">
                   <h2 class="s3-subtitle">Respostas incorretas</h2>
-
                   <input class="wrongAnswer1" type="text" placeholder="Resposta incorreta 1">
                   <input class="urlWrongAnswer1" type="url" placeholder="URL da imagem 1">
-
                   <input class="wrongAnswer2" type="text" placeholder="Resposta incorreta 2">
                   <input class="urlWrongAnswer2" type="url" placeholder="URL da imagem 2">
-
                   <input class="wrongAnswer3" type="text" placeholder="Resposta incorreta 3">
                   <input class="urlWrongAnswer3" type="url" placeholder="URL da imagem 3">
                </fieldset>
             </form>
-
             <div class="newOne">
                <div>
                   <h2 class="s3-subtitle">Pergunta 2</h2>
@@ -123,7 +117,6 @@
                   </button>
                </div>
             </div>
-
             <div class="newOne">
                <div>
                   <h2 class="s3-subtitle">Pergunta 3</h2>
@@ -134,13 +127,10 @@
                   </button>
                </div>
             </div>
-
             <button class="mainButton" onclick="continueToLevels()">Prosseguir para criar níveis</button>
          </section>
-
          <section class="quizLevels hidden">
             <h1 class="s3-title">Agora, decida os níveis</h1>
-
             <form class="s3-container">
                <fieldset class="level">
                   <h2 class="s3-subtitle">Nível 1</h2>
@@ -150,7 +140,6 @@
                   <textarea class="levelDescription" placeholder="Descrição do nível"></textarea>
                </fieldset>
             </form>
-
             <div class="newOne">
                <div>
                   <h2 class="s3-subtitle">Nível 2</h2>
@@ -161,7 +150,6 @@
                   </button>
                </div>
             </div>
-
             <div class="newOne">
                <div>
                   <h2 class="s3-subtitle">Nível 3</h2>
@@ -172,20 +160,16 @@
                   </button>
                </div>
             </div>
-
             <button class="mainButton" onclick="finishQuizCreation()">Finalizar Quiz</button>
          </section>
-
          <section class="quizSuccess hidden">
             <h1 class="s3-title">Seu quiz está pronto!</h1>
-
             <div class="quizBanner">
                <img src="#">
                <p>TITULO DO QUIZ</p>
             </div>
-
             <button class="mainButton" onclick="">Acessar Quiz</button>
-            <button onclick="window.location.reload()">Voltar para home</button>
+            <button class="alternativeButton" onclick="window.location.reload()">Voltar para home</button>
          </section>
       </article>
    </main>

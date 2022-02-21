@@ -214,8 +214,8 @@ function showResult() {
     </div>
   </section>
   <section class="buttons">
-    <button onclick="restartQuiz()" class="restart-btn">Reiniciar Quiz</button>
-    <button onclick="window.location.reload()" class="home-btn">Voltar para home</button>
+    <button onclick="restartQuiz()" class="mainButton">Reiniciar Quiz</button>
+    <button onclick="window.location.reload()" class="alternativeButton">Voltar para home</button>
   </section>
   `;
 
