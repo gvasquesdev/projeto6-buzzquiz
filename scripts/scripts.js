@@ -54,7 +54,7 @@ function renderQuiz(quiz) {
   // const userQuizzesSection = document.querySelector(".user-quizzes");
   const serverQuizzesSection = document.querySelector(".server-quizzes");
 
-  const newQuiz = `<div onclick="identifyQuiz(${id})" class="quiz">
+  const newQuiz = `<div onclick="identifyQuiz(${id})" class="quiz" data-identifier="quizz-card">
   <img src="${image}">
   <p>${title}</p>
   </div>`;
@@ -108,9 +108,14 @@ let i = 0;
 function renderQuestion(question) {
   const questionsSection = document.querySelector(".questions");
 
+  if (question.color === "#ffffff" || question.color === "#FFFFFF") {
+    question.color = "#000000";
+  }
+
   let newQuestion = `
   <div id="${i++}" class="question">
-    <div class="question-title" style="background-color: ${question.color};">
+    <div class="question-title" style="background-color: ${question.color};" 
+    data-identifier="question">
       <p>${question.title}</p>
     </div>
     <div class="answers">
@@ -130,7 +135,7 @@ function renderAnswers(answers) {
 
   answers.forEach((answer) => {
     const newAnswer = `
-    <div class="answer" onclick="verifyAnswer(this)" iscorrect="${answer.isCorrectAnswer}">
+    <div class="answer" onclick="verifyAnswer(this)" iscorrect="${answer.isCorrectAnswer}" data-identifier="answer">
       <img src="${answer.image}">
       <p>${answer.text}</p>
     </div>
@@ -197,7 +202,7 @@ function showResult() {
   const result = levels[indexResult];
 
   endOfQuiz.innerHTML = `
-  <section class="result">
+  <section class="result" data-identifier="quizz-result">
     <div class="result-title">
       <p>${percent}% de acerto: ${result.title}</p>
     </div>
@@ -232,7 +237,6 @@ function shuffle() {
 }
 
 /* SCREEN3 -> CREATE QUIZ */
-
 const CQ_BasicInfos = document.querySelector(".basicInfos");
 const CQ_Questions = document.querySelector(".quizQuestions");
 const CQ_Levels = document.querySelector(".quizLevels");
@@ -250,9 +254,3 @@ function finishQuizCreation() {
   CQ_Levels.classList.add("hidden");
   CQ_Success.classList.remove("hidden");
 }
-
-// function toggleAddNew(button) {
-//   const divNewOne = button.parentElement;
-//   const newLevel = divNewOne.querySelector(".s3-container");
-//   newLevel.classList.toggle("hidden");
-// }

@@ -98,3 +98,7 @@
   bottom: 12%;
   left: 5%;
 }
+
+.server-quizzes > div {
+  cursor: pointer;
+}

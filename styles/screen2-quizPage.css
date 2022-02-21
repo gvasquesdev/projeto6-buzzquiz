@@ -36,20 +36,22 @@ body {
 
 .questions {
   width: 100%;
+  max-width: 760px;
   margin: 0 auto;
 }
 
 .question {
   width: 100%;
+  max-width: 760px;
   padding: 20px 10px;
   background-color: #ffffff;
   margin-bottom: 20px;
 }
 
 .question-title {
-  width: 95%;
+  width: 90%;
   margin: 0 auto;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   padding: 20px;
   text-align: center;
   line-height: 1.2;
@@ -59,18 +61,24 @@ body {
 }
 
 .answers {
-  width: 95%;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 10px;
+  justify-content: space-evenly;
+  gap: 20px;
 }
 
 .answer img {
   width: 163px;
   height: 113px;
   object-fit: cover;
+}
+
+@media (min-width: 1000px) {
+  .answer img {
+    width: 300px;
+  }
 }
 
 .answer p {
@@ -93,6 +101,7 @@ body {
 
 .result-title {
   width: 95%;
+  max-width: 500px;
   padding: 20px;
   margin: 20px auto;
   background-color: red;
@@ -110,10 +119,13 @@ body {
 }
 .result img {
   width: 95%;
+  max-width: 300px;
 }
 
 .result-description {
   width: 95%;
+  max-width: 500px;
+  text-align: center;
   padding: 5px;
   padding-bottom: 20px;
   margin: 0 auto;
@@ -127,6 +139,7 @@ body {
 button {
   display: block;
   width: 60%;
+  max-width: 500px;
   margin: 0 auto;
   padding: 12px;
   border: none;

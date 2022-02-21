@@ -35,15 +35,17 @@
          <section class="user-quizzes-section">
             <section class="no-user-quizzes">
                <p>Você não criou nenhum Quiz ainda :(</p>
-               <button onclick="createQuiz()">Criar Quiz</button>
+               <button onclick="createQuiz()" data-identifier="create-quizz">Criar Quiz</button>
             </section>
 
             <section class="has-user-quizzes">
                <div>
                   <h2 class="section-title">Seus Quizzes</h2>
-                  <button onclick="createQuiz()"><img src="./images/createQuizz.png"></button>
+                  <button onclick="createQuiz()" data-identifier="create-quizz">
+                     <img src="./images/createQuizz.png">
+                  </button>
                </div>
-               <section class="user-quizzes">
+               <section class="user-quizzes" data-identifier="user-quizzes">
                   <!-- Inserted by Javascript -->
                </section>
             </section>
@@ -51,7 +53,7 @@
 
          <section class="server-quizzes-section">
             <h2 class="section-title">Todos os Quizzes</h2>
-            <section class="server-quizzes">
+            <section class="server-quizzes" data-identifier="general-quizzes">
                <!-- Inserted by Javascript -->
             </section>
          </section>
@@ -116,7 +118,7 @@
                   <h2 class="s3-subtitle">Pergunta 2</h2>
                </div>
                <div>
-                  <button onclick="">
+                  <button onclick="toggleAddNew(this)">
                      <img src="./images/newOne.png">
                   </button>
                </div>

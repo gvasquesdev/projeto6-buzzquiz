@@ -3,9 +3,14 @@
   font-family: "Roboto", sans-serif;
 }
 
+button {
+  cursor: pointer;
+}
+
 #screen3 {
   width: 100vw;
   height: calc(100vh - 70px);
+  overflow-x: hidden;
 }
 
 .basicInfos,
@@ -29,6 +34,7 @@
 
 .createQuiz form {
   width: 100%;
+  max-width: 500px;
   background-color: white;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
   padding: 20px 10px;
@@ -53,10 +59,12 @@
 .mainButton {
   width: 325px;
   height: 54px;
+  border-radius: 20px;
   background-color: #ec362d;
   font-size: 18px;
   color: #fff5f4;
   margin-bottom: 30px;
+  cursor: pointer;
 }
 
 /* Quiz Questions */
@@ -95,6 +103,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  max-width: 500px;
   height: 70px;
   background-color: white;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
